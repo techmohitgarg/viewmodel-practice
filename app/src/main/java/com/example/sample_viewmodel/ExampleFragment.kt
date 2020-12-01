@@ -19,10 +19,21 @@ class ExampleFragment : Fragment() {
 
     private lateinit var viewModel: ExampleViewModel
 
+    private lateinit var viewModelFactory: ExampleViewModelFactory
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i("GameFragment", "Called ViewModelProvider.get")
-        viewModel = ViewModelProvider(requireActivity()).get(ExampleViewModel::class.java)
+
+        // WITH OUT USING FACTORY METHOED
+        //viewModel = ViewModelProvider(requireActivity()).get(ExampleViewModel::class.java)
+
+        // USING FACTORY METHOD
+
+        viewModelFactory = ExampleViewModelFactory()
+        viewModel =
+            ViewModelProvider(requireActivity(), viewModelFactory).get(ExampleViewModel::class.java)
+
     }
 
 

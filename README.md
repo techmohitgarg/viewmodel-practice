@@ -8,3 +8,9 @@ This is simple application that contains single view or page to understand how v
 
   - Download the project and build and run the application
 
+### Features
+
+ - How to create view model
+ - how to create view model using factory
+
+
