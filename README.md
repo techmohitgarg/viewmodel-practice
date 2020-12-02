@@ -11,6 +11,6 @@ This is simple application that contains single view or page to understand how v
 ### Features
 
  - How to create view model
- - how to create view model using factory
+ - how to create view model using view model factory
 
 
